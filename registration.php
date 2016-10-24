@@ -116,7 +116,7 @@ body {
     <form method="post" action="" name="loginform">
     <input type="text" value="demo" placeholder="Username" id="username" name="username" />
     <input type="password" value="demo" placeholder="Password" id="password" name="password" />
-    <button type="submit">Submit</button>
+    <button type="Registrar">Submit</button>
     </form>
 <?php if(@$msg){?><a href="index.php">Login</a><?php }?> 
 </div>
