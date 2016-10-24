@@ -118,7 +118,7 @@ body {
     <input type="password" value="demo" placeholder="Password" id="password" name="password" />
     <button type="submit">Submit</button>
     </form>
-<?php if(@$msg){?><a href="login.php">Login</a><?php }?> 
+<?php if(@$msg){?><a href="index.php">Login</a><?php }?> 
 </div>
 </body>
 
