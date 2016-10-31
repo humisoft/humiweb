@@ -1,5 +1,5 @@
 <?php 
-include("dbconfig.php");
+include("/home/u454412831/.dbconfig.php");
 session_start();
 if(!isset($_SESSION['login_user']))
 	{
