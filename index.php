@@ -10,15 +10,12 @@ $password=md5($password);
 $sql_query="SELECT id FROM user WHERE username='$username' and password='$password'";
 $result=mysqli_query($dbconfig,$sql_query);
 $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
-echo "esto es el row:$row";
 $count=mysqli_num_rows($result);
-echo "esto es el count:$count";
 
 // If result matched $username and $password, table row must be 1 row
 if($count==1)
 {
 $_SESSION['login_user']=$username;
-echo "esta entrando antes del header";
 header("location: welcome-home.php");
 }
 else
