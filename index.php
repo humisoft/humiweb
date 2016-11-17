@@ -1,5 +1,5 @@
 <?php 
-include("inic.php");
+include("script/inic.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
