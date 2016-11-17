@@ -1,3 +1,6 @@
+<?php 
+include("inic.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

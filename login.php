@@ -1,5 +1,5 @@
 <?php 
-include("script/login.php");
+include("script/acceso.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
