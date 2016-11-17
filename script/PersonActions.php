@@ -10,11 +10,11 @@ try
             
               
                 //Get records from database
-                $result = mysql_query("SELECT * FROM olt ORDER BY description;");
+                $result = mysqli_query("SELECT * FROM olt ORDER BY description;");
 
                 //Add all records to an array
                 $rows = array();
-                while($row = mysql_fetch_array($result))
+                while($row = mysqli_fetch_array($result))
                 {
                     $rows[] = $row;
                 }
@@ -31,7 +31,7 @@ try
         //Creating a new record (createAction)
         else if($_GET["action"] == "create")
         {
- //         $ultimadescription = mysql_query("last_value(description)");  
+ //         $ultimadescription = mysqli_query("last_value(description)");  
 
             //SIN TELEFONO NI INTERNET
             if($_POST["linea1"] == null && $_POST["us"] == null && $_POST["ds"] == null && $_POST["mode"] == null){
@@ -75,11 +75,11 @@ try
         
 
             //Insert record into database
-            $result = mysql_query("INSERT INTO olt (fsp, ontid, sn, us, ds, mode, linea1, description) VALUES ('" . $_POST["fsp"] . "', '" . $_POST["ontid"] . "', '" . $_POST["sn"] . "', '" . $_POST["us"] . "', '" . $_POST["ds"] . "', '" . $_POST["mode"] . "', '" . $_POST["linea1"] . "', '" . $_POST["description"] . "');");
+            $result = mysqli_query("INSERT INTO olt (fsp, ontid, sn, us, ds, mode, linea1, description) VALUES ('" . $_POST["fsp"] . "', '" . $_POST["ontid"] . "', '" . $_POST["sn"] . "', '" . $_POST["us"] . "', '" . $_POST["ds"] . "', '" . $_POST["mode"] . "', '" . $_POST["linea1"] . "', '" . $_POST["description"] . "');");
 
             //Get last inserted record (to return to jTable)
-            $result = mysql_query("SELECT * FROM olt WHERE id = LAST_INSERT_ID();");
-            $row = mysql_fetch_array($result);
+            $result = mysqli_query("SELECT * FROM olt WHERE id = LAST_INSERT_ID();");
+            $row = mysqli_fetch_array($result);
 
             //Return result to jTable
             $jTableResult = array();
@@ -118,9 +118,9 @@ try
             }
 
             //Update record in database
-            $result = mysql_query("UPDATE olt SET us = '" . $_POST["us"] . "', ds = '" . $_POST["ds"] . "', linea1 = '" . $_POST["linea1"] . "', description = '" . $_POST["description"] . "' WHERE id = " . $_POST["id"] . ";");
+            $result = mysqli_query("UPDATE olt SET us = '" . $_POST["us"] . "', ds = '" . $_POST["ds"] . "', linea1 = '" . $_POST["linea1"] . "', description = '" . $_POST["description"] . "' WHERE id = " . $_POST["id"] . ";");
 
-            //$result = mysql_query("SELECT * FROM olt ORDER BY description;");
+            //$result = mysqli_query("SELECT * FROM olt ORDER BY description;");
 
 
             //Return result to jTable
@@ -133,18 +133,18 @@ try
         else if($_GET["action"] == "delete")
         {   
             //BORRAR ONT
-            $resu1 = mysql_query("SELECT fsp FROM olt WHERE id = " . $_POST["id"] . ";");
-            $resu2 = mysql_query("SELECT ontid FROM olt WHERE id = " . $_POST["id"] . ";");
+            $resu1 = mysqli_query("SELECT fsp FROM olt WHERE id = " . $_POST["id"] . ";");
+            $resu2 = mysqli_query("SELECT ontid FROM olt WHERE id = " . $_POST["id"] . ";");
 
-            $fspArray = mysql_fetch_row($resu1);
+            $fspArray = mysqli_fetch_row($resu1);
             $fsp = $fspArray[0];
-            $ontidArray = mysql_fetch_row($resu2);
+            $ontidArray = mysqli_fetch_row($resu2);
             $ontid = $ontidArray[0];
             exec("date >> log");
             exec("sh BajaOnt.sh '" . $fsp . "' '" . $ontid . "' >> log");
             
             //Delete from database
-            $result = mysql_query("DELETE FROM olt WHERE id = " . $_POST["id"] . ";");
+            $result = mysqli_query("DELETE FROM olt WHERE id = " . $_POST["id"] . ";");
 
             //Return result to jTable
             $jTableResult = array();
@@ -155,7 +155,7 @@ try
         	
         //Close database connection
         closelog();
-        mysql_close($con);
+        mysqli_close($con);
 
 }
 catch(Exception $ex)
