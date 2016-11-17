@@ -3,8 +3,7 @@
 try
 {
         //Open database connection
-        $con = mysql_connect("hosts","usuario","contrasena");
-        mysql_select_db("bd", $con);
+        include(".dbconfig.php");
         //Getting records (listAction)
         if($_GET["action"] == "list")
         {
