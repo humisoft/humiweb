@@ -16,7 +16,7 @@ $count=mysqli_num_rows($result);
 if($count==1)
 {
 $_SESSION['login_user']=$username;
-header("location: index.html");
+header("location: index.php");
 }
 else
 {
