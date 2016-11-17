@@ -21,14 +21,6 @@ include("script/inic.php");
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
 
-    <!-- jTable Scripts -->
-    <link href="assets/jtable/themes/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
-    <link href="assets/jtable/scripts/jtable/themes/lightcolor/blue/jtable.css" rel="stylesheet" type="text/css" />
-    <script src="assets/jtable/scripts/jquery-1.6.4.min.js" type="text/javascript"></script>
-    <script src="assets/jtable/scripts/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
-    <script src="assets/jtable/scripts/jtable/jquery.jtable.js" type="text/javascript"></script>
-    <!-- Fin jTable Scripts -->
-
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -331,6 +323,8 @@ include("script/inic.php");
     <!--common script for all pages-->
     <script src="assets/js/common-scripts.js"></script>
 
+  
+
     <!--script for this page-->
     
   <script>
@@ -342,7 +336,14 @@ include("script/inic.php");
 
   </script>
 
-<script type="text/javascript">
+    <!-- jTable Scripts -->
+    <link href="assets/jtable/themes/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+    <link href="assets/jtable/scripts/jtable/themes/lightcolor/blue/jtable.css" rel="stylesheet" type="text/css" />
+    <script src="assets/jtable/scripts/jquery-1.6.4.min.js" type="text/javascript"></script>
+    <script src="assets/jtable/scripts/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="assets/jtable/scripts/jtable/jquery.jtable.js" type="text/javascript"></script>
+    <!-- Fin jTable Scripts -->
+  <script type="text/javascript">
 
         $(document).ready(function () {
 
@@ -525,7 +526,7 @@ include("script/inic.php");
                 $('#PeopleTableContainer').jtable('load');
 
         });
-</script>
+  </script>
 
   </body>
 </html>
