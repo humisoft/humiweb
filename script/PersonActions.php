@@ -10,7 +10,7 @@ try
             
               
                 //Get records from database
-                $result = mysqli_query("SELECT * FROM olt ORDER BY description;");
+                $result = mysqli_query($dbconfig, "SELECT * FROM olt ORDER BY description;");
 
                 //Add all records to an array
                 $rows = array();
