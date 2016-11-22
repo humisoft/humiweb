@@ -155,7 +155,7 @@ try
         	
         //Close database connection
         closelog();
-        mysqli_close($con);
+        mysqli_close($dbconfig);
 
 }
 catch(Exception $ex)
