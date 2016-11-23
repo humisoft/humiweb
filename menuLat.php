@@ -43,8 +43,8 @@
                           <span>Extra Pages</span>
                       </a>
                       <ul class="sub">
-                          <li class="active"><a  href="blank.php">Blank Page</a></li>
-						  <li><a  href="olt.php">OLT</a></li>
+                          <li><a  href="blank.php">Blank Page</a></li>
+						  <li class="active"><a  href="olt.php">OLT</a></li>
                           <li><a  href="login.php">Login</a></li>
                           <li><a  href="lock_screen.php">Lock Screen</a></li>
                       </ul>
