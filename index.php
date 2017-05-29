@@ -11,7 +11,7 @@ include("script/inic.php");
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
     <title>DASHGUM - FREE Bootstrap Admin Template</title>
-
+	<!-- Probando cambios desde Eclipse -->
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
